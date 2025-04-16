@@ -311,3 +311,64 @@ syncSchedulesWithTransitLines(routeId: int, transitLineId: int) → bool
 **_Outcome_**
 
 The 77 route is extended to link with major lines, and schedules are coordinated for smoother transfers.
+
+## Non-functional Requirements
+
+### EPIC_2_REQ_3:
+
+**As** a system administrator
+**I want** the system to support flexible route configurations
+**To** easily accommodate future expansions or changes to the New Hamburg service area.
+
+**Purpose:** Ensure the software can handle complex and growing route networks without major redesign.
+
+### Tasks
+
+#### Task_01: Design a modular route configuration system to support dynamic changes.
+
+**_Solution_**
+
+```bash
+createNewRouteConfiguration(routeId: int, configurationData: RouteConfigData) → bool
+```
+```bash
+modifyRouteConfiguration(routeId: int, configurationData: RouteConfigData) → bool
+```
+```bash
+checkRouteDependencies(routeId: int) → List[Route]
+```
+```bash
+validateRouteConfig(routeId: int, configurationData: RouteConfigData) → bool
+```
+
+**_Outcome_**
+
+The system allows dynamic creation, modification, and validation of route configurations, enabling easy expansion and adjustments to the New Hamburg service area without major redesigns.
+
+### EPIC_2_REQ_4:
+
+**As** a system administrator
+**I want** the application to efficiently manage and display multiple overlapping routes
+**To** help passengers clearly understand their options to reach New Hamburg.
+
+**Purpose:** Improve user experience when multiple route choices are available for the same destination.
+
+### Tasks
+
+#### Task_01: 
+
+**_Solution_**
+
+```bash
+generateOverlappingRouteVisual(routeIds: List[int]) → Image
+```
+```bash
+optimizeRouteDisplay(routeIds: List[int]) → List[RouteSegment]
+```
+```bash
+updateRouteDisplay(routeVisualization: Image) → bool
+```
+
+**_Outcome_**
+
+The system efficiently displays overlapping routes in an intuitive visual format, helping passengers easily understand their options to reach New Hamburg.
