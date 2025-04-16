@@ -25,7 +25,9 @@ Passengers would use the bus service more frequently if the operating hours were
 ### EPIC_1_REQ_1:
 
 **As** a passenger
+
 **I want** the 77 bus to run services before 7 AM
+
 **To** be able to travel to New Hamburg early in the morning.
 
 **Purpose:** Support passengers with early work shifts or travel needs.
@@ -53,7 +55,9 @@ The 77 bus route now includes early morning departures starting at 5:30 AM, supp
 ### EPIC_1_REQ_2:
 
 **As** a passenger
+
 **I want** the 77 bus to run services after 7 PM
+
 **To** return from New Hamburg later in the evening.
 
 **Purpose:** Provide flexibility for evening events, late work shifts, or emergencies.
@@ -79,8 +83,11 @@ _**Outcome**_
 The 77 bus route operates until 10:00 PM, giving passengers flexibility for evening travel from New Hamburg.
 
 ###  EPIC_1_REQ_3:
+
 **As** a passenger
+
 **I want** the updated bus schedule to be published online and at stations
+
 **To** easily plan my trip.
 
 **Purpose:** Ensure passengers are informed about the new operating hours.
@@ -102,6 +109,7 @@ validateWebPublication(routeId: int) → bool
 ```
 
 **_Outcome_**
+
 Passengers can view the latest bus schedule on the website immediately after updates, ensuring online trip planning is always accurate.
 
 #### Task_02: Update and synchronize physical station displays with the new schedule.
@@ -125,8 +133,11 @@ All physical station displays reflect the updated schedule, providing clear and 
 ## Non-functional Requirements
 
 ### EPIC_1_REQ_4:
+
 **As** a system administrator
+
 **I want** all schedule changes to propagate across all digital platforms (mobile app, web app, station screens) within 10 seconds of update
+
 **To** ensure consistent and accurate passenger information.
 
 **Purpose:** Real-time data synchronization to prevent outdated schedules.
@@ -152,8 +163,11 @@ dispatchToAllChannels(event: ScheduleUpdateEvent) → bool
 Schedule updates are instantly pushed to all platforms (mobile, web, station screens), ensuring updates reach passengers within 10 seconds
 
 ### EPIC_1_REQ_5:
+
 **As** a system administrator
+
 **I want** the scheduling backend to support zero downtime deployments
+
 **To** allow updates to bus operating hours without service interruption.
 
 **Purpose:** High availability during schedule changes.
@@ -181,7 +195,9 @@ New deployments happen on a separate environment and traffic is only switched wh
 ### EPIC_1_REQ_6:
 
 **As** a system administrator
+
 **I want** an automated audit trail of schedule modifications stored in a secure log 
+
 **To** ensure traceability and compliance.
 
 **Purpose:** Enable accountability and system monitoring.
@@ -231,7 +247,9 @@ More direct or expanded routes to New Hamburg will reduce travel time and increa
 ### EPIC_2_REQ_1:
 
 **As** a passenger
+
 **I want** new stops added closer to residential areas
+
 **To** reduce walking distance to the bus.
 
 **Purpose:** Increase convenience and accessibility.
@@ -273,7 +291,9 @@ New stops are added in residential areas, reducing passenger walking distances.
 ### EPIC_2_REQ_2:
 
 **As** a passenger
+
 **I want** the 77 route to connect with other major transit lines
+
 **To** reduce the need for multiple transfers.
 
 Purpose: Improve journey efficiency and attract more riders.
@@ -317,7 +337,9 @@ The 77 route is extended to link with major lines, and schedules are coordinated
 ### EPIC_2_REQ_3:
 
 **As** a system administrator
+
 **I want** the system to support flexible route configurations
+
 **To** easily accommodate future expansions or changes to the New Hamburg service area.
 
 **Purpose:** Ensure the software can handle complex and growing route networks without major redesign.
@@ -348,7 +370,9 @@ The system allows dynamic creation, modification, and validation of route config
 ### EPIC_2_REQ_4:
 
 **As** a system administrator
+
 **I want** the application to efficiently manage and display multiple overlapping routes
+
 **To** help passengers clearly understand their options to reach New Hamburg.
 
 **Purpose:** Improve user experience when multiple route choices are available for the same destination.
@@ -372,3 +396,4 @@ updateRouteDisplay(routeVisualization: Image) → bool
 **_Outcome_**
 
 The system efficiently displays overlapping routes in an intuitive visual format, helping passengers easily understand their options to reach New Hamburg.
+
