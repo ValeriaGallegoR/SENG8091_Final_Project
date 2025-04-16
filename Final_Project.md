@@ -223,3 +223,91 @@ More direct or expanded routes to New Hamburg will reduce travel time and increa
 - Would more stops increase accessibility without making the trip too long?
 - Are there alternative routes or connections that passengers prefer but are currently unavailable?
 - What is the estimated increase in ridership if the route coverage improves?
+
+## REQUIREMENTS 
+
+## Functional Requirements
+
+### EPIC_2_REQ_1:
+
+**As** a passenger
+**I want** new stops added closer to residential areas
+**To** reduce walking distance to the bus.
+
+**Purpose:** Increase convenience and accessibility.
+
+### Tasks
+
+#### Task_01: Analyze residential density to identify underserved areas.
+
+**_Solution_**
+
+```bash
+getHighDensityAreas() → List[GeoLocation]
+```
+
+```bash
+findAreasWithoutStops(densityAreas: List[GeoLocation], existingStops: List[BusStop]) → List[GeoLocation]
+```
+
+**_Outcome_**
+
+Identifies specific residential zones lacking nearby bus stops.
+
+#### Task_02: Plan and integrate new stops into the route.
+
+**_Solution_**
+
+```bash
+proposeNewStops(locations: List[GeoLocation]) → List[BusStop]
+```
+
+```bash
+addNewStopToRoute(routeId: int, stop: BusStop) → bool
+```
+
+_**Outcome**_
+
+New stops are added in residential areas, reducing passenger walking distances.
+
+### EPIC_2_REQ_2:
+
+**As** a passenger
+**I want** the 77 route to connect with other major transit lines
+**To** reduce the need for multiple transfers.
+
+Purpose: Improve journey efficiency and attract more riders.
+
+### Tasks
+
+ #### Task_01: Identify major transit hubs and analyze route gaps.
+
+**_Solution_**
+
+```bash
+getMajorTransitHubs() → List[GeoLocation]
+```
+
+```bash
+findMissingConnections(routePath: List[GeoLocation], hubs: List[GeoLocation]) → List[GeoLocation]
+```
+
+**_Outcome_**
+
+Pinpoint’s locations where the 77 route lacks connections to major transit lines.
+
+#### Task_02: Update route and synchronize schedules with connecting lines.
+
+_**Solution**_
+
+```bash
+adjustRouteForConnections(routeId: int, hubs: List[GeoLocation]) → bool
+```
+
+```bash
+syncSchedulesWithTransitLines(routeId: int, transitLineId: int) → bool
+```	
+
+**_Outcome_**
+
+The 77 route is extended to link with major lines, and schedules are coordinated for smoother transfers.
