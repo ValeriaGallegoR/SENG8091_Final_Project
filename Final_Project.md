@@ -414,3 +414,67 @@ Real-time updates will reduce uncertainty and improve the travel experience for 
 - What notification methods (mobile app, SMS, station displays) do passengers prefer?
 - How accurate and timely can the real-time data be for the 77 bus?
 - Are there technical challenges in integrating the 77 bus route into a real-time tracking system?
+
+## REQUIREMENTS 
+
+## Functional Requirements
+
+### EPIC_3_REQ_1:
+
+**As** a passenger
+
+**I want** to see real-time arrival estimates for the 77 bus
+
+**To** minimize waiting time at stops.
+
+**Purpose:** Improve passenger satisfaction with timely information.
+
+### Tasks
+
+#### Task_01: Implement real-time tracking and estimation of bus arrival times.
+
+_**Solution**_
+
+```bash
+trackBusArrival(routeId: int, stopId: int) → BusArrivalEstimate
+```
+```bash
+calculateArrivalEstimate(busLocation: GeoLocation, stopLocation: GeoLocation) → datetime
+```
+```bash
+updateArrivalEstimate(estimate: BusArrivalEstimate) → bool
+```
+
+**_Outcome_**
+
+The system provides real-time estimates for bus arrivals, helping passengers minimize waiting times at stops.
+
+### EPIC_3_REQ_2:
+
+**As** a passenger
+
+**I want** to receive notifications about delays on the 77 bus route
+
+**To** adjust my travel plans accordingly.
+
+**Purpose:** Provide proactive communication.
+
+### Tasks
+
+#### Task_01: Implement a notification system for bus delays.
+
+**_Solution_**
+
+```bash
+monitorDelays(routeId: int, delayThreshold: int) → List[DelayEvent]
+```
+```bash
+sendDelayNotification(userId: int, delayEvent: DelayEvent) → bool
+```
+```bash
+getUserNotificationPreferences(userId: int) → NotificationPreferences
+```
+
+**_Outcome_**
+
+Passengers receive timely notifications about delays, allowing them to adjust their travel plans accordingly.
