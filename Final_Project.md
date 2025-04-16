@@ -202,3 +202,24 @@ storeLogEntry(logEntry: LogEntry) → bool
 _**Outcome**_
 
 Every schedule change is automatically logged and securely stored, ensuring full traceability and compliance with audit requirements.
+
+
+# EPIC 2: ADDITIONAL ROUTES AND STOPS
+
+**As** a passenger who wants to travel to New Hamburg,
+
+**I want** more convenient bus stops and routes,
+
+**To** reach New Hamburg more directly without long detours or transfers.
+
+### Assumption:
+
+More direct or expanded routes to New Hamburg will reduce travel time and increase passenger satisfaction.
+
+### Validations (Questions):
+
+- Which neighborhoods or areas are underserved by the current route to New Hamburg?
+- How much time would passengers save with a more direct or expanded route?
+- Would more stops increase accessibility without making the trip too long?
+- Are there alternative routes or connections that passengers prefer but are currently unavailable?
+- What is the estimated increase in ridership if the route coverage improves?
