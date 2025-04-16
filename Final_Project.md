@@ -397,3 +397,20 @@ updateRouteDisplay(routeVisualization: Image) → bool
 
 The system efficiently displays overlapping routes in an intuitive visual format, helping passengers easily understand their options to reach New Hamburg.
 
+# EPIC 3: REAL-TIME TRACKING AND NOTIFICATIONS
+
+**As** a passenger who wants to travel to New Hamburg,
+
+**I want** real-time updates on bus location and arrival times,
+
+**To** plan my journey more efficiently and avoid long waits at stops.
+
+### Assumption:
+
+Real-time updates will reduce uncertainty and improve the travel experience for passengers heading to New Hamburg.
+
+### Validations (Questions):
+
+- What notification methods (mobile app, SMS, station displays) do passengers prefer?
+- How accurate and timely can the real-time data be for the 77 bus?
+- Are there technical challenges in integrating the 77 bus route into a real-time tracking system?
