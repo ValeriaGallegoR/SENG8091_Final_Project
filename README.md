@@ -18,3 +18,7 @@ Although this route was implemented it currently has some issues that cause disc
 - Poor route coverage: Many areas lack direct bus access, forcing residents to use multiple modes of transportation (Grand River Transit, n.d.).
 - Need for improvement: A more efficient, accessible and expanded transportation solution is needed.
 
+#### References
+
+- Grand River Transit. (n.d.). Route 77 Wilmot. Grand River Transit. Retrieved April 13, 2025, from https://www.grt.ca/en/schedules-maps/route-77-wilmot.aspx  
+- Grand River Transit. (2017, June). New service added on Route 77 Wilmot. Grand River Transit. https://www.grt.ca/Modules/News/index.aspx?newsId=3a997e51-417d-41a7-9f98-8d08ba49da36  
