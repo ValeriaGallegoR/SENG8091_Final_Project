@@ -478,3 +478,98 @@ getUserNotificationPreferences(userId: int) → NotificationPreferences
 **_Outcome_**
 
 Passengers receive timely notifications about delays, allowing them to adjust their travel plans accordingly.
+
+## Non-functional requirements
+
+### EPIC_3_REQ_3:
+
+**As** a system administrator
+
+**I want** the system to support dynamic service hours configurations
+
+**To** easily extend or modify bus operation times without needing code changes.
+
+**Purpose:** Enable flexible scheduling to adjust operating hours for special events or permanent changes.
+
+### Tasks
+
+#### Task_01: Develop a service hours configuration manager to allow dynamic adjustments of bus operating times.
+
+**_Solution_**
+
+```bash
+setServiceHours(routeId: int, startTime: datetime, endTime: datetime) → bool
+```
+```bash
+getServiceHours(routeId: int) → ServiceHours
+```
+```bash
+validateServiceHours(startTime: datetime, endTime: datetime) → bool
+```
+
+**_Outcome_**
+
+The system allows administrators to dynamically set and update bus operating hours without code changes, enabling quick adjustments for special events or permanent changes.
+
+### Task_02: Implement a user interface for administrators to manage and update service hours.
+
+**_Solution_**
+
+```bash
+showServiceHoursForm(routeId: int) → ServiceHoursForm
+```
+```bash
+updateServiceHoursForm(routeId: int, newHours: ServiceHours) → bool
+```
+```bash
+notifyUpdateToAdmin(routeId: int, updateStatus: bool) → bool
+```
+
+_**Outcome**_
+
+Admins can easily adjust and save changes to bus service hours using a simple interface, ensuring that updates are visible and communicated across the system.
+
+### EPIC_3_REQ_4:
+
+**As** a system administrator
+
+**I want** the system to handle time-based rules for service availability
+
+**To** ensure that journey planners and schedules accurately reflect extended service periods.
+
+**Purpose:** Avoid confusion by only showing valid options for the passenger’s time of travel.
+
+### Tasks
+
+#### Task_01: Create a time-based rule engine that filters available routes based on the current time.
+
+**_Solution_**
+
+```bash
+getAvailableRoutes(currentTime: datetime) → List[Route]
+```
+```bash
+setServiceTimeRules(routeId: int, startTime: datetime, endTime: datetime) → bool
+```
+
+**_Outcome_**
+
+The system filters and displays only the valid routes for the current time, ensuring that passengers only see available options during their journey period.
+
+#### Task_02: Implement dynamic rule management for special service hours
+
+**_Solution_**
+
+```bash
+createSpecialServiceRule(routeId: int, specialDate: datetime, startTime: datetime, endTime: datetime) → bool
+```
+```bash
+validateSpecialServiceRule(routeId: int, currentDate: datetime) → bool
+```
+```bash
+adjustPlanForSpecialService(currentDate: datetime, routeId: int) → List[Route]
+```	
+
+_**Outcome**_
+
+Time-based rules are applied dynamically to manage extended service hours or changes for special events, ensuring accurate scheduling for passengers during unique periods.
